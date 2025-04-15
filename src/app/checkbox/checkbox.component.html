@@ -1,0 +1,11 @@
+<div [formGroup]="formGroup">
+  <div class="flex items-center justify-start">
+    <input
+      type="checkbox"
+      [name]="fieldName"
+      [value]="value"
+      [formControlName]="formControlName"
+    />
+    <div>{{ label }}</div>
+  </div>
+</div>

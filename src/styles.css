@@ -1,1 +1,47 @@
-/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+
+@font-face {
+  font-family: "tobias";
+  src: url("/fonts/tobias_regular.woff2");
+}
+@font-face {
+  font-family: "tobias-italic";
+  src: url("/fonts/tobias_regularItalic.woff2");
+}
+@font-face {
+  font-family: "druk";
+  src: url("/fonts/druk_medium.woff2");
+}
+@font-face {
+  font-family: "helvetica";
+  src: url("/fonts/helvetica_neue_light.woff2");
+}
+@font-face {
+  font-family: "helvetica-medium";
+  src: url("/fonts/helvetica_neue_medium.woff2");
+}
+
+@theme {
+  --color-brand_purple: #6424c9;
+  --color-brand_light: #eeebdd;
+  --color-brand_dark: #765f4a;
+  --color-brand_yellow: #e9e466;
+  --font-tobias: tobias;
+  --font-tobias-italic: tobias-italic;
+  --font-druk: druk;
+  --font-helvetica: "helvetica";
+  --font-helvetica-medium: helvetica-medium;
+}
+
+body {
+  font-family: tobias;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #765f4a;
+  transition: background-color 5000s ease-in-out 0s;
+  box-shadow: inset 0 0 20px 20px #eeebdd;
+}

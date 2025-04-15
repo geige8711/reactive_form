@@ -1,0 +1,13 @@
+<div [formGroup]="formGroup">
+  <label [for]="fieldName()">{{ title() }}</label>
+  <select
+    [name]="fieldName()"
+    [id]="fieldName()"
+    [formControlName]="fieldName()"
+    class="border border-brand_dark rounded-lg w-full h-10 px-2"
+  >
+    @for(option of options; track option.value){
+    <option [value]="option.value">{{ option.label }}</option>
+    }
+  </select>
+</div>

@@ -1,0 +1,9 @@
+<div [formGroup]="formGroup">
+  <label [for]="fieldName()">{{ title() }}</label>
+  <input
+    [type]="type()"
+    [name]="fieldName()"
+    [formControlName]="fieldName()"
+    class="w-full h-10 px-2 rounded-lg bg-brand_light border border-brand_dark focus:outline-none focus:border-brand_purple focus:border-2"
+  />
+</div>
