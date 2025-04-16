@@ -1741,6 +1741,20 @@
     "@napi-rs/nice-win32-ia32-msvc" "1.0.1"
     "@napi-rs/nice-win32-x64-msvc" "1.0.1"
 
+"@ng-icons/bootstrap-icons@^31.2.0":
+  version "31.2.0"
+  resolved "https://registry.yarnpkg.com/@ng-icons/bootstrap-icons/-/bootstrap-icons-31.2.0.tgz#6dc306c46c84b5450b237775bcf733c1bd05ffb1"
+  integrity sha512-EBycq1bj5xRnDB5oSgf9x5vajUMQMZaP+FsYzLuTAjbxMNzVOZf8vTLVgXPwJjQps8FHgt819mj77n/5KjYDIQ==
+  dependencies:
+    tslib "^2.3.0"
+
+"@ng-icons/core@^31.2.0":
+  version "31.2.0"
+  resolved "https://registry.yarnpkg.com/@ng-icons/core/-/core-31.2.0.tgz#b075b92f7ea02d871df3022b2b0d1c2612d89b93"
+  integrity sha512-9l2oVD0n/v6YL6MPsdGmqGWLnq4P9Ds1omGwueXoaq0ZXTZTwI4E16NpWDItDE/sg1hLt+yR62rgKc4JCTGpvg==
+  dependencies:
+    tslib "^2.3.0"
+
 "@ngtools/webpack@19.2.7":
   version "19.2.7"
   resolved "https://registry.yarnpkg.com/@ngtools/webpack/-/webpack-19.2.7.tgz#5a06b75cab3f7ff7f47ffbb8cbac44d1e66b5a84"

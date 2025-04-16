@@ -39,17 +39,24 @@
     </div>
     <div>
       <div>Date of Birth</div>
-      <input name="dob" formControlName="dob" [dpDayPicker]="config" />
+      <input
+        name="dob"
+        formControlName="dob"
+        [dpDayPicker]="config"
+        class="w-full border h-10 rounded-lg focus:outline-none focus:border-brand_purple focus:border-2 px-2"
+      />
     </div>
     <div class="grid grid-cols-2 gap-x-5">
       <app-text-input
         title="Password"
         fieldName="password"
+        type="password"
         [formGroup]="form.controls.passwords"
       />
       <app-text-input
         title="Confirm Password"
         fieldName="rePassword"
+        type="password"
         [formGroup]="form.controls.passwords"
       />
     </div>

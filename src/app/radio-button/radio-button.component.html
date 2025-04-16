@@ -1,4 +1,9 @@
 <div class="flex items-center justify-start" [formGroup]="formGroup">
-  <input type="radio" [name]="fieldName" [value]="value" />
+  <input
+    type="radio"
+    [formControlName]="fieldName"
+    [attr.name]="fieldName"
+    [value]="value"
+  />
   <div>{{ label }}</div>
 </div>

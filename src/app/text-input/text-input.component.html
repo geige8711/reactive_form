@@ -1,7 +1,19 @@
-<div [formGroup]="formGroup">
+<div [formGroup]="formGroup" class="relative">
+  @if(type()==='password'){
+  <span
+    class="absolute right-0 top-1/2 w-8 h-8 cursor-pointer flex justify-center items-center"
+    (click)="onClick()"
+  >
+    @if(isHidden()){
+    <ng-icon name="bootstrapEyeSlashFill" />
+    }@else {
+    <ng-icon name="bootstrapEyeFill" />
+    }
+  </span>
+  }
   <label [for]="fieldName()">{{ title() }}</label>
   <input
-    [type]="type()"
+    [type]="isHidden() ? type() : 'text'"
     [name]="fieldName()"
     [formControlName]="fieldName()"
     class="w-full h-10 px-2 rounded-lg bg-brand_light border border-brand_dark focus:outline-none focus:border-brand_purple focus:border-2"
