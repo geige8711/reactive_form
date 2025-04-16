@@ -1,9 +1,9 @@
-import { Component, forwardRef, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import {
-  ControlValueAccessor,
+  ControlContainer,
   FormArray,
-  FormGroup,
-  NG_VALUE_ACCESSOR,
+  FormControl,
+  FormGroupDirective,
   ReactiveFormsModule,
 } from '@angular/forms';
 
@@ -12,27 +12,25 @@ import {
   imports: [ReactiveFormsModule],
   templateUrl: './checkbox.component.html',
   styleUrl: './checkbox.component.css',
-  providers: [
-    {
-      provide: NG_VALUE_ACCESSOR,
-      useExisting: forwardRef(() => CheckboxComponent),
-      multi: true,
-    },
+  viewProviders: [
+    { provide: ControlContainer, useExisting: FormGroupDirective },
   ],
 })
-export class CheckboxComponent implements ControlValueAccessor {
-  registerOnChange(fn: any): void {}
-  registerOnTouched(fn: any): void {}
-  setDisabledState?(isDisabled: boolean): void {}
+export class CheckboxComponent implements OnInit {
   @Input({ required: true }) fieldName!: string;
   @Input({ required: true }) label!: string;
   @Input({ required: true }) value!: string;
-  @Input({ required: true }) formGroup!: FormGroup;
-  // @Input({ required: true }) formArray!: FormArray;
-  // @Input({ required: true }) formArrayName!: string;
-  @Input({ required: true }) formControlName!: string;
+  @Input({ required: true }) fieldIndex!: number;
 
-  writeValue(value: string): void {
-    this.value = value || '';
+  constructor(public parentForm: FormGroupDirective) {}
+  ngOnInit(): void {
+    this.parentForm.form.addControl(
+      this.fieldName,
+      new FormArray([
+        new FormControl(false),
+        new FormControl(false),
+        new FormControl(false),
+      ])
+    );
   }
 }

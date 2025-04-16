@@ -49,16 +49,6 @@ export class AppComponent {
       rePassword: new FormControl('', { validators: [Validators.required] }),
     }),
     gender: new FormControl('o', { validators: [Validators.required] }),
-    sports: new FormArray([
-      new FormControl(false),
-      new FormControl(false),
-      new FormControl(false),
-    ]),
-    source: new FormArray([
-      new FormControl(false),
-      new FormControl(false),
-      new FormControl(false),
-    ]),
   });
 
   onSubmit() {

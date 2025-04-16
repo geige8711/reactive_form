@@ -74,64 +74,46 @@
       />
     </div>
     <div>Your favourite sports</div>
-    <fieldset class="grid grid-cols-3" formArrayName="source">
-      <div class="flex items-center justify-start">
-        <input
-          type="checkbox"
-          name="sports1"
-          value="swimming"
-          formControlName="0"
-        />
-        <div>Swimming</div>
-      </div>
-      <div class="flex items-center justify-start">
-        <input
-          type="checkbox"
-          name="sports2"
-          value="running"
-          formControlName="1"
-        />
-        <div>Running</div>
-      </div>
-      <div class="flex items-center justify-start">
-        <input
-          type="checkbox"
-          name="sport3"
-          value="skating"
-          formControlName="2"
-        />
-        <div>Skating</div>
-      </div>
+    <fieldset class="grid grid-cols-3">
+      <app-checkbox
+        label="Swimming"
+        fieldName="sports"
+        value="swimming"
+        [fieldIndex]="0"
+      />
+      <app-checkbox
+        label="Running"
+        fieldName="sports"
+        value="running"
+        [fieldIndex]="1"
+      />
+      <app-checkbox
+        label="Skating"
+        fieldName="sports"
+        value="skating"
+        [fieldIndex]="2"
+      />
     </fieldset>
     <div>How did you find us?</div>
     <fieldset class="grid grid-cols-3" formArrayName="sports">
-      <div class="flex items-center justify-start">
-        <input
-          type="checkbox"
-          name="acquisition"
-          value="google"
-          formControlName="0"
-        />
-        <div>Google</div>
-      </div>
-      <div class="flex items-center justify-start">
-        <input
-          type="checkbox"
-          name="acquisition"
-          value="friend"
-          formControlName="1"
-        />
-        <div>Friend</div>
-      </div>
-      <div class="flex items-center justify-start">
-        <input
-          type="checkbox"
-          name="acquisition"
-          value="other"
-          formControlName="2"
-        />
-        <div>Other</div>
-      </div>
+      <app-checkbox
+        label="Google"
+        fieldName="acquisition"
+        value="google"
+        [fieldIndex]="0"
+      />
+      <app-checkbox
+        label="Friend"
+        fieldName="acquisition"
+        value="friend"
+        [fieldIndex]="1"
+      />
+      <app-checkbox
+        label="Other"
+        fieldName="acquisition"
+        value="other"
+        [fieldIndex]="2"
+      />
     </fieldset>
     <div>
       <button
